@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Krati ❤</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+      color: #333;
+      text-align: center;
+    }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.2rem;
+      color: #d63384;
+      text-shadow: 2px 2px 8px rgba(255,255,255,0.5);
+    }
+    header {
+      padding: 2rem;
+    }
+    .section {
+      padding: 3rem 1rem;
+    }
+    .image-section img {
+      max-width: 90%;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      margin-bottom: 2rem;
+    }
+    .quote {
+      font-size: 1.5rem;
+      font-style: italic;
+      margin-top: 1rem;
+      color: #fff;
+    }
+    footer {
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #fff;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      0%, 100% { border-color: transparent }
+      50% { border-color: #ff6b81 }
+    }
+    .typing-text {
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 3px solid #ff6b81;
+      animation: typing 3s steps(40, end), blink 0.7s step-end infinite;
+      width: 100%;
+      max-width: 90%;
+      margin: 0 auto 20px;
+      font-size: 22px;
+      font-family: 'Courier New', monospace;
+      color: #333;
+      text-align: center;
+    }
+    .ghibli-frame {
+      border: 4px solid rgba(255, 208, 229, 0.6);
+      border-radius: 14px;
+      box-shadow: 0 0 18px rgba(255, 173, 216, 0.5), 0 0 40px rgba(255, 173, 216, 0.2);
+      background: #fffafc;
+      max-height: 85vh;
+      overflow-y: auto;
+    }
+    #letterModal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width:100%;
+      height:100%;
+      background-color: rgba(0,0,0,0.85);
+      z-index: 1000;
+    }
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #333;
+      cursor: pointer;
+    }
+    .letter-content img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      background-color: #ff6b81;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 0 12px rgba(255, 105, 135, 0.6);
+      transition: all 0.3s ease;
+      animation: bounce 2s infinite;
+    }
+    button:hover {
+      background-color: #ff4f70;
+      transform: scale(1.05);
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Happy 20th Birthday, Krati 🎂</h1>
+    <p class="quote">"Tere bina sab adhoora hai... bas tu ho toh main hoon."</p>
+  </header>
+
+  <section class="section image-section">
+    <img src="GhibliArtBirthday.jpg" alt="Krati Birthday Ghibli Art" width="350"/>
+  </section>
+
+  <!-- Modal Button -->
+  <div style="text-align: center; margin-top: 40px;">
+    <button onclick="document.getElementById('letterModal').style.display='block'">💌 Read My Letter</button>
+  </div>
+
+  <!-- Modal -->
+  <div id="letterModal">
+    <div class="ghibli-frame" style="position: relative; margin: 5% auto; padding: 20px; width: 90%; max-width: 750px;">
+      <span class="close-btn" onclick="document.getElementById('letterModal').style.display='none'">&times;</span>
+      <div class="typing-text">A letter from Suraj to Krati... 💖</div>
+      <div class="letter-content">
+        <img src="letter_page1.jpg" alt="Letter Page 1">
+        <img src="letter_page2.jpg" alt="Letter Page 2">
+      </div>
+    </div>
+  </div>
+
+  <!-- Special Video Redirect -->
+  <!-- Watch Something Special Button -->
+<div style="text-align: center; margin-top: 40px;">
+  <button onclick="window.location.href='krativ.html'" style="padding: 12px 25px; font-size: 18px; background-color: #ff6b81; color: white; border: none; border-radius: 12px; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    🎬 Watch Something Special
+  </button>
+</div>
+
+  <footer>
+    <p>Made with endless love by Suraj — for Krati, my forever.</p>
+  </footer>
+
+  <script>
+    // Autoplay letter modal if ?openLetter=true
+    window.onload = function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('openLetter') === 'true') {
+        document.getElementById('letterModal').style.display = 'block';
+      }
+    };
+
+    // Redirect to video.html with autoplay=true
+    document.getElementById('videoRedirect').addEventListener('click', function () {
+      window.location.href = "video.html?autoplay=true";
+    });
+  </script>
+</body>
+</html>
